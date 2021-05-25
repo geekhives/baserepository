@@ -2,12 +2,12 @@
 
 namespace Geekhives\BaseRepository\Service;
 
-use Exception;
 use Illuminate\Foundation\Exceptions\Handler;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Validation\ValidationException;
+use Throwable;
 
 class ExceptionHandler extends Handler
 {
@@ -20,7 +20,7 @@ class ExceptionHandler extends Handler
         //
     ];
 
-    /**
+    /** 
      * A list of the inputs that are never flashed for validation exceptions.
      *
      * @var array
@@ -37,7 +37,7 @@ class ExceptionHandler extends Handler
      * @return void
      * @throws Exception
      */
-    public function report(Exception $exception)
+    public function report(Throwable $exception)
     {
         parent::report($exception);
     }
@@ -49,7 +49,7 @@ class ExceptionHandler extends Handler
      * @param Exception $exception
      * @return array|JsonResponse
      */
-    public function render($request, Exception $exception)
+    public function render($request, Throwable $exception)
     {
         $error = $this->convertExceptionToResponse($exception);
         $response = [];
