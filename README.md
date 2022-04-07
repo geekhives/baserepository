@@ -9,7 +9,7 @@
 ```
     "require": {
         ...
-        "geekhives/baserepository": "^0.1"
+        "geekhives/baserepository": "^3.0"
     },
     {
       "repositories": [{
