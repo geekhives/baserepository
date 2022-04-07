@@ -24,7 +24,8 @@
     "php": "^8.0",
     "illuminate/support": "^9.0",
     "ext-json": "*",
-    "league/fractal": "^0.17.0"
+    "league/fractal": "^0.17.0",
+    "laravel/legacy-factories": "1.x-dev"
   },
   "require-dev": {
     "orchestra/testbench": "^7.3",
